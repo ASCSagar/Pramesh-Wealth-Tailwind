@@ -8,9 +8,9 @@ import sipBanner from "../../assets/images/sip.jpeg";
 import insuranceBanner from "../../assets/images/insurance.jpeg";
 import investmentBanner from "../../assets/images/retirement.jpeg";
 import ExpandableSection from "../../components/UI/ExpandableSection";
-import InvestmentProducts from "./Services/InvestmentProducts";
-import Insurance from "./Services/Insurance";
-import SIP from "./Services/SIP";
+import SIP from "../../components/Services/SIP";
+import Insurance from "../../components/Services/Insurance";
+import InvestmentProducts from "../../components/Services/InvestmentProducts";
 
 const services = [
   { id: "sip", name: "SIPs", icon: BarChart2 },

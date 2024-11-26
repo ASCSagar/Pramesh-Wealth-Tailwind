@@ -8,10 +8,10 @@ import {
   Calculator,
   ArrowRight,
 } from "lucide-react";
-import FixedDepositCalculator from "../../../components/Calculater/FixedDepositCalculator";
-import MutualFundCalculator from "../../../components/Calculater/MutualFundCalculator";
-import RetirementCalculator from "../../../components/Calculater/RetirementCalculator";
-import TaxSavingCalculator from "../../../components/Calculater/TaxSavingCalculator";
+import FixedDepositCalculator from "../Calculater/FixedDepositCalculator";
+import MutualFundCalculator from "../Calculater/MutualFundCalculator";
+import RetirementCalculator from "../Calculater/RetirementCalculator";
+import TaxSavingCalculator from "../Calculater/TaxSavingCalculator";
 
 const products = {
   mutualFunds: {
