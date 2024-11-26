@@ -35,7 +35,6 @@ const Hero = ({ title, subtitle }) => {
           backgroundImage: `url(${banner})`,
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-800/60 to-secondary-900/50" />
       <div className="absolute inset-0 flex flex-col">
         <div className="flex-1 flex items-center justify-center">
           <div className="container mx-auto px-4 relative z-10">

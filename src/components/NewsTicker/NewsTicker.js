@@ -29,7 +29,7 @@ const NewsTicker = () => {
           "https://newsdata.io/api/1/news?apikey=pub_569373a6c80e7f47d4c740f75d99954998e50 ",
           {
             params: {
-              apikey: "pub_2680473190c3e8a72c15c79f9cd99bd28d7d2", // Replace with your Newsdata.io API key
+              apikey: "pub_2680473190c3e8a72c15c79f9cd99bd28d7d2",
               country: "in",
               category: "business",
               language: "en",
