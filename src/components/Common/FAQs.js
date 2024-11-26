@@ -79,6 +79,20 @@ const FAQs = ({ category }) => {
           "Critical illness cover pays out a lump sum if you're diagnosed with a specific serious illness listed in the policy. This typically includes conditions like cancer, heart attack, or stroke. The payout can be used to cover medical expenses, replace lost income, or for any other purpose. It's designed to provide financial support when you need it most, allowing you to focus on recovery without worrying about financial strain.",
       },
     ],
+    loan: [
+      {
+        question: "How do I choose the right loan for my needs?",
+        answer: "Please select the right loan for your needs.",
+      },
+      {
+        question: "What are the eligibility criteria for a loan?",
+        answer: "Please select the right loan for your needs.",
+      },
+      {
+        question: "What is the process for applying for a loan?",
+        answer: "Please select the right loan for your needs.",
+      },
+    ],
     investment: [
       {
         question:

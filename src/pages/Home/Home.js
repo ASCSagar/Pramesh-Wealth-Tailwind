@@ -9,6 +9,7 @@ import {
   PiggyBank,
   Clock,
   Calculator,
+  LoaderPinwheel,
 } from "lucide-react";
 import Slider from "react-slick";
 import { motion, AnimatePresence } from "framer-motion";
@@ -111,7 +112,7 @@ const Home = () => {
         <AnimatedHeading className="text-3xl font-bold text-center text-primary-900 mb-8">
           Our Services
         </AnimatedHeading>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           <Service
             icon={BarChart2}
             title=" SIP"
@@ -124,6 +125,13 @@ const Home = () => {
             title="Insurance"
             description="Protect your family's future with our comprehensive insurance solutions."
             link="/services#insurance"
+            index={1}
+          />
+          <Service
+            icon={LoaderPinwheel}
+            title="Loan"
+            description="Secure your future with our diverse range of loan options."
+            link="/services#loan"
             index={1}
           />
           <Service

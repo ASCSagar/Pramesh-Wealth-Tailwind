@@ -8,23 +8,22 @@ const tabContent = {
     title: "Life Insurance",
     icon: <Shield className="w-12 h-12 mb-4 text-primary-600" />,
     description:
-      "Secure your family's future with our comprehensive life insurance policies. We offer tailored solutions to protect your loved ones financially, no matter what life brings.",
+      "Term insurance and standard life insurance vary in that, term plans only pay death benefits in event of the policyholder's demise within the policy's term, but life insurance policies include both death and maturity payment to policyholders. The coverage lasts your entire life, and when you opt to cancel it, you receive a lump-sum payment.",
     items: [
       {
-        name: "Pure Term Plan",
-        description: "Maximum coverage at affordable premiums",
+        name: "Term Life Insurance",
+        description:
+          "Term life insurance is a form of life insurance that ensures the sum of a defined benefit to a nominee if the insured person passes away, within a specific time. It can be renewed, converted to permanent coverage, or allowed to lapse when the policy expires. A person’s age, health, and life expectancy are considered when determining the premium of the term life insurance.",
       },
       {
-        name: "Whole Life Plan",
-        description: "Lifelong protection with savings benefit",
+        name: "Investment Plan",
+        description:
+          "If you want to develop wealth over time to achieve short- or long-term financial goals, investment plans are perfect. These plans are structured so that a portion of the premium is utilized to provide insurance cover. The remainder is put in a financial instrument. A policyholder's risk tolerance determines the amount of money invested.",
       },
       {
-        name: "Endowment Plan",
-        description: "Dual benefit of insurance and savings",
-      },
-      {
-        name: "Unit-Linked Insurance Plans (ULIPs)",
-        description: "Combine insurance with market-linked investments",
+        name: "Savings Plan",
+        description:
+          "( Income - Saving ) = Expense These investment plans provide a methodical approach to saving and building a corpus, which provides consistent returns that enable you to achieve your future goals. In the event of the policyholder's unexpected death, these policies also cover the nominee or family.",
       },
     ],
     ctaText: "Contact us For a Quote",
@@ -33,48 +32,46 @@ const tabContent = {
     title: "Health Insurance",
     icon: <Heart className="w-12 h-12 mb-4 text-secondary-600" />,
     description:
-      "Protect yourself and your loved ones with our comprehensive health insurance plans. Ensure access to quality healthcare without financial stress.",
+      "Health insurance is a contract where an insurance company provides medical coverage. It covers medical expenses incurred on hospitalization, surgeries, day care procedures, etc. A health insurance policy either reimburses the medical costs or offers cashless treatment.",
     items: [
       {
         name: "Individual Health Plans",
-        description: "Tailored coverage for your personal health needs",
+        description:
+          "An individual health insurance plan is a type of health insurance that covers the health care expenses of the insured individual. It pays for the hospitalization and surgical expenses of the policyholder up to the sum insured limit.",
       },
       {
-        name: "Family Health Plans",
-        description: "Comprehensive protection for your entire family",
+        name: "Family Floater Plan",
+        description:
+          "A family floater health insurance, as the name suggests is a plan that is tailor made for families. It is similar to individual health plans in principle; the only difference is that it is extended to cover your entire family. This acts as an umbrella of coverage for the entire family and therefore the name.",
       },
       {
-        name: "Senior Citizen Plans",
-        description: "Specialized coverage for elderly care",
+        name: "Group Health Insurance",
+        description:
+          "Group Health Insurance is a type of plan that provides insurance coverage to a group of members, usually a group of employees of a company or members of an organization.",
       },
       {
-        name: "Critical Illness Cover",
-        description: "Financial support for serious health conditions",
+        name: "Critical Illness Insurance",
+        description:
+          "Critical illness insurance provides additional coverage for medical emergencies like heart attacks, strokes, or cancer. Because these emergencies or illnesses often incur greater-than-average medical costs, these policies pay out cash to help cover those overruns when traditional health insurance may fall short.",
       },
     ],
     ctaText: "Explore Health Coverage Options",
   },
-  general: {
-    title: "General Insurance",
+  vehicle: {
+    title: "Vehicle Insurance",
     icon: <Car className="w-12 h-12 mb-4 text-primary-600" />,
     description:
-      "Safeguard your valuable assets with our range of general insurance products. Protect what matters most to you against unexpected events.",
+      "More popularly known as motor insurance, this type of insurance provides cover for loss or damage to any vehicle like car, two-wheeler or commercial vehicle, etc. This insurance helps mitigate monetary harms due to accidents causing damage to the vehicles.",
     items: [
       {
-        name: "Motor Insurance",
-        description: "Comprehensive coverage for your vehicles",
+        name: "Car Insurance",
+        description:
+          "A car insurance policy is a contract between you, the car owner, and the insurance company. The policy covers the financial losses that you might suffer when you are using your car. These losses might arise when you hurt someone and become financially liable to pay for the injuries or when your own car is damaged or stolen. The coverage that you get depends on the type of car insurance plan that you buy.",
       },
       {
-        name: "Home Insurance",
-        description: "Protect your home and belongings",
-      },
-      {
-        name: "Travel Insurance",
-        description: "Worry-free journeys with comprehensive coverage",
-      },
-      {
-        name: "Personal Accident Insurance",
-        description: "Financial protection against accidental injuries",
+        name: "Two-Wheeler Insurance",
+        description:
+          "Two-wheeler insurance is a type of insurance that is mandatory in India. Falling under the General insurance product category, it helps protect people against accidents that take place on the road.",
       },
     ],
     ctaText: "Secure Your Assets Now",

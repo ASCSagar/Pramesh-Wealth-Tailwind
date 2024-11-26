@@ -18,27 +18,47 @@ const products = {
     title: "Mutual Funds",
     icon: <TrendingUp className="w-12 h-12 mb-4 text-primary-600" />,
     description:
-      "Diversify your portfolio with our range of mutual funds. Professional management and diversification help you achieve your financial goals.",
+      "A Mutual Fund is a financial intermediary which allows a group of investors to pool in their money with a predetermined investment objective. A qualified fund manager is appointed, who is responsible for investing the pooled money into specific securities and asset classes (usually stocks or bonds). When you invest in a mutual fund, you buy a share (or portion) of the mutual fund. We advise and service clients who wish to invest in any mutual fund available in the market. We also provide the platform to buy, sell and monitor your portfolio online.",
     items: [
       {
-        name: "Equity Funds",
-        description: "Invest in stocks for potential high returns",
+        name: "Expert Management",
+        description:
+          "Mutual Funds are managed by qualified and experienced professionals who have access to company research reports, research analysts, critical and timely market information.",
       },
       {
-        name: "Debt Funds",
-        description: "Stable returns through fixed-income securities",
+        name: "Reduced Risks",
+        description:
+          "Mutual Funds help diversify your portfolio and therefore reduce your overall investment risk. To achieve a comparable diversified equity portfolio, you would not only require a lot of cash, your risk is also completely dependent on how those particular companies perform. Mutual funds offer you diversification across and within specific asset class.",
       },
       {
-        name: "Hybrid Funds",
-        description: "Balance of equity and debt for moderate risk",
+        name: "Speedy access to your money",
+        description:
+          "Investors in open-ended mutual funds can buy and sell units at Net Asset Value (NAV) which is declared on a daily basis.",
       },
       {
-        name: "Index Funds",
-        description: "Track market indices for passive investing",
+        name: "Affordability",
+        description:
+          "Minimum amount required to in a mutual fund is very low. For that amount, you still own a diversified portfolio.",
       },
       {
-        name: "International Funds",
-        description: "Global exposure to diversify your portfolio",
+        name: "Tax Benefits",
+        description:
+          "Equity Linked Savings Schemes (ELSS) offer tax rebates to investors under Section 80C of the Income Tax Act. Also, Capital Gains from the above Mutual Funds are tax-free in the hands of the investor.",
+      },
+      {
+        name: "Lower Costs",
+        description:
+          "Mutual Funds buy and sell large amounts of securities at a time, thus help reducing transaction costs. Also, Mutual Funds in India have No Entry Load.",
+      },
+      {
+        name: "Transparency",
+        description:
+          "Entire portfolio of the Mutual Fund scheme is disclosed to investors on a regular basis. One of the few transparent investment vehicles available in the market today.",
+      },
+      {
+        name: "Regulated for investor protection",
+        description:
+          "The Mutual Fund industry is regulated by Association of Mutual Funds of India (AMFI) in order to safeguard investors’ interest.",
       },
     ],
     calculator: <MutualFundCalculator />,
