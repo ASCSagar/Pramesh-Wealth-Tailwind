@@ -1,21 +1,76 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "../../assets/pramesh-wealth-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoginDropdownOpen, setIsLoginDropdownOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+  const toggleMobileMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    setIsLoginOpen(false);
+    setDropdownOpen(false);
   };
 
-  const toggleLoginDropdown = () => {
-    setIsLoginDropdownOpen(!isLoginDropdownOpen);
+  const toggleMobileLoginDropdown = () => {
+    setIsLoginOpen(!isLoginOpen);
+    setDropdownOpen(false);
   };
+
+  const toggleDesktopLoginDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+    setIsLoginOpen(false);
+  };
+
+  const LoginLinks = ({ isMobile = false }) => (
+    <div
+      className={`${
+        isMobile
+          ? "block"
+          : "absolute right-0 mt-2 w-48 rounded-xl bg-white shadow-xl border border-gray-100 overflow-hidden"
+      }`}
+    >
+      <div
+        className={`${
+          isMobile
+            ? "bg-white shadow-lg border border-gray-100 mt-2 rounded-lg"
+            : "py-2"
+        }`}
+      >
+        <Link
+          to="https://iinvestoffice.com/Login.aspx"
+          className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
+          target="_blank"
+        >
+          Admin LogIn
+        </Link>
+        <Link
+          to="https://iinvestoffice.com/branchlogin.aspx"
+          className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
+          target="_blank"
+        >
+          Branch LogIn
+        </Link>
+        <Link
+          to="https://crm.prameshwealth.com/"
+          className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
+          target="_blank"
+        >
+          Employee LogIn
+        </Link>
+        <Link
+          to="https://iinvestoffice.com/clientlogin.aspx"
+          className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
+          target="_blank"
+        >
+          Customer LogIn
+        </Link>
+      </div>
+    </div>
+  );
 
   return (
     <header className="sticky top-0 z-40 backdrop-filter backdrop-blur-lg bg-white bg-opacity-50">
@@ -65,7 +120,7 @@ const Header = () => {
             <div className="relative">
               <button
                 className="text-gray-800 hover:text-primary-600 px-3 py-2 rounded-md text-base font-medium flex items-center gap-1"
-                onClick={toggleDropdown}
+                onClick={toggleDesktopLoginDropdown}
               >
                 LogIn
                 <svg
@@ -84,103 +139,74 @@ const Header = () => {
                   />
                 </svg>
               </button>
-              {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-xl bg-white shadow-xl border border-gray-100 overflow-hidden">
-                  <div className="py-2">
-                    <Link
-                      to="https://iinvestoffice.com/Login.aspx"
-                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-                      target="_blank"
-                    >
-                      Admin LogIn
-                    </Link>
-                    <Link
-                      to="https://iinvestoffice.com/branchlogin.aspx"
-                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-                      target="_blank"
-                    >
-                      Branch LogIn
-                    </Link>
-                    <Link
-                      to="https://crm.prameshwealth.com/"
-                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-                      target="_blank"
-                    >
-                      Employee LogIn
-                    </Link>
-                    <Link
-                      to="https://iinvestoffice.com/clientlogin.aspx"
-                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-                      target="_blank"
-                    >
-                      Customer LogIn
-                    </Link>
-                  </div>
-                </div>
-              )}
+              {dropdownOpen && <LoginLinks />}
             </div>
           </nav>
 
           <button
             className="md:hidden text-gray-800 hover:text-primary-600 ml-auto"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMobileMenu}
           >
-            <Menu size={24} />
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      <div className="relative">
-        {/* Main Menu Items */}
-        {isMenuOpen && (
-          <div className="absolute top-0 right-0 bg-white border-t border-gray-200 px-4 py-4 w-full">
+      {isMenuOpen && (
+        <div className="absolute top-24 left-0 w-full bg-white border-t border-gray-200 md:hidden">
+          <div className="px-4 py-4">
             <Link
               to="/"
               className="block py-2 text-gray-800 hover:text-primary-600"
+              onClick={toggleMobileMenu}
             >
               Home
             </Link>
             <Link
               to="/about"
               className="block py-2 text-gray-800 hover:text-primary-600"
+              onClick={toggleMobileMenu}
             >
               About Us
             </Link>
             <Link
               to="/services"
               className="block py-2 text-gray-800 hover:text-primary-600"
+              onClick={toggleMobileMenu}
             >
               Services
             </Link>
             <Link
               to="/downloads"
               className="block py-2 text-gray-800 hover:text-primary-600"
+              onClick={toggleMobileMenu}
             >
               Downloads
             </Link>
             <Link
               to="/announcement"
               className="block py-2 text-gray-800 hover:text-primary-600"
+              onClick={toggleMobileMenu}
             >
               Announcements
             </Link>
             <Link
               to="/contact"
               className="block py-2 text-gray-800 hover:text-primary-600"
+              onClick={toggleMobileMenu}
             >
               Contact
             </Link>
 
-            <div>
+            <div className="relative">
               <button
-                onClick={toggleLoginDropdown}
-                className="block py-2 text-gray-800 hover:text-primary-600 flex items-center gap-1"
+                onClick={toggleMobileLoginDropdown}
+                className="block py-2 text-gray-800 hover:text-primary-600 flex items-center gap-1 w-full text-left"
               >
                 LogIn
-                {/* Arrow icon that rotates when dropdown is open */}
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${
-                    isLoginDropdownOpen ? "rotate-180" : ""
+                    isLoginOpen ? "rotate-180" : ""
                   }`}
                   fill="none"
                   viewBox="0 0 24 24"
@@ -194,42 +220,11 @@ const Header = () => {
                   />
                 </svg>
               </button>
-              {isLoginDropdownOpen && (
-                <div className="bg-white shadow-lg border border-gray-100 mt-2 w-full rounded-lg absolute left-0">
-                  <Link
-                    to="https://iinvestoffice.com/Login.aspx"
-                    className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-                    target="_blank"
-                  >
-                    Admin LogIn
-                  </Link>
-                  <Link
-                    to="https://iinvestoffice.com/branchlogin.aspx"
-                    className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-                    target="_blank"
-                  >
-                    Branch LogIn
-                  </Link>
-                  <Link
-                    to="https://crm.prameshwealth.com/"
-                    className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-                    target="_blank"
-                  >
-                    Employee LogIn
-                  </Link>
-                  <Link
-                    to="https://iinvestoffice.com/clientlogin.aspx"
-                    className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-                    target="_blank"
-                  >
-                    Customer LogIn
-                  </Link>
-                </div>
-              )}
+              {isLoginOpen && <LoginLinks isMobile />}
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };

@@ -1,6 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,24 +16,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Pramesh Wealth</h3>
-            <p className="text-sm mb-4">The Investment Bridge</p>
-            <div className="text-sm space-y-2">
-              <p className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:8980027228" className="hover:text-primary-300">
-                  89800 27228
-                </a>
-              </p>
-              <p className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <a
-                  href="mailto:sarju@prameshwealth.com"
-                  className="hover:text-primary-300"
-                >
-                  sarju@prameshwealth.com
-                </a>
-              </p>
-            </div>
+            <p className="">
+              Founded in 2001, the Pramesh has grown to become one of the
+              Leading Financial Services Provider. Our wide network spans more
+              than 5 own branches in Gujarat and serving an esteemed clientele
+              of 5000 investors.
+            </p>
           </div>
 
           <div>
@@ -38,13 +33,23 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/about" className="hover:text-primary-300">
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link to="/services" className="hover:text-primary-300">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-primary-300">
-                  About Us
+                <Link to="/downloads" className="hover:text-primary-300">
+                  Downloads
+                </Link>
+              </li>
+              <li>
+                <Link to="/announcement" className="hover:text-primary-300">
+                  Announcements
                 </Link>
               </li>
               <li>
@@ -88,7 +93,35 @@ const Footer = () => {
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-            <div className="flex space-x-4"></div>
+            <p className="mb-4">
+              “Pramesh House” 8, Vedant Bunglow,
+              <br /> Main Kalali road, Kalali,
+              <br />
+              Vadodara- 390012
+            </p>
+            <div className="space-y-2">
+              <p className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <a href="tel:8980027228" className="hover:text-primary-300">
+                  89800 27228
+                </a>
+              </p>
+              <p className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <a
+                  href="mailto:sarju@prameshwealth.com"
+                  className="hover:text-primary-300"
+                >
+                  sarju@prameshwealth.com
+                </a>
+              </p>
+            </div>
+            <div className="flex space-x-4 mt-8">
+              <Facebook className="w-6 h-6 text-neutral-200" />
+              <Instagram className="w-6 h-6 text-neutral-200" />
+              <Linkedin className="w-6 h-6 text-neutral-200" />
+              <Youtube className="w-6 h-6 text-neutral-200" />
+            </div>
           </div>
         </div>
       </div>
@@ -98,12 +131,14 @@ const Footer = () => {
           <div className="text-xs sm:text-sm grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <p>
-                <span className="font-semibold">MF Distributor:</span> AMFI ARN
-                No: 100481 (Valid till 19/02/2027)
+                <span className="font-semibold">Mutual Fund Distributo:</span>{" "}
+                Registered with AMFI Under ARN No : 100481 - Date of initial
+                Registration: 20/02/2015 - Valid Up to 19th February, 2027.
               </p>
               <p>
-                <span className="font-semibold">Insurance:</span> IRDAI Reg No:
-                CA0787 (Valid till 26/12/2024)
+                <span className="font-semibold">Insurance Business:</span>{" "}
+                Registered with IRDAI as Corporate (Agent) Composite Under the
+                Registration No : CA0787 - Valid Up to 26.12.2024.
               </p>
               <p>
                 <span className="font-semibold">Grievance Officer:</span> Sarju

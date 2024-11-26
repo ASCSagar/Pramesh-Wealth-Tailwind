@@ -335,7 +335,6 @@ const Services = () => {
                 backgroundImage: `url(${bannerImages[activeSection]})`,
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
           </motion.div>
 
           <div className="relative h-full flex items-center">
