@@ -10,6 +10,8 @@ import Announcement from "./pages/Announcement/Announcement";
 import NotFound from "./pages/NotFound/NotFound";
 import TidioChat from "./components/TidioChat/TidioChat";
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 
 function App() {
   return (
@@ -23,6 +25,11 @@ function App() {
           <Route path="/announcement" element={<Announcement />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditions />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <TidioChat />

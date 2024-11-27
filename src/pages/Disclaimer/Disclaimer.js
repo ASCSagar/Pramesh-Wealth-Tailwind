@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import { TrendingUp, Shield, LoaderPinwheel } from "lucide-react";
+import { TrendingUp, Shield, LoaderPinwheel, MonitorCog } from "lucide-react";
 
 const disclaimer = [
   { id: "mutual funds", name: "Mutual Funds", icon: TrendingUp },
   { id: "insurance", name: "Insurance", icon: Shield },
+  {
+    id: "pramesh wealth private limited",
+    name: "Pramesh Wealth Private Limited",
+    icon: MonitorCog,
+  },
   { id: "website", name: "Website", icon: LoaderPinwheel },
 ];
 
@@ -38,13 +43,14 @@ const Disclaimer = () => {
               <div className="bg-primary-50 p-6 rounded-xl shadow-soft hover:shadow-hover transition-shadow duration-300 mb-8">
                 <p className="text-lg text-primary-700">
                   Pramesh Wealth Private Limited is registered with Association
-                  of Mutual Funds In India (AMFI) under the ARN No. 100481 and
-                  valid till 19.02.2027), having its registered office and
-                  Centralize Point for processing and doing all Mutual Funds
-                  Distribution (MFD) related functions at{" "}
+                  of Mutual Funds In India (AMFI) under the ARN No.
+                  <strong> 100481</strong> and valid till 
                   <strong>
-                    “Pramesh House”, B/8, Vedant Bunglow, Main Kalali Road,
-                    Kalali, Vadodara – 390 012, Gujarat State, India,
+                    19.02.2027, having its registered office and Centralize
+                    Point for processing and doing all Mutual Funds Distribution
+                    (MFD) related functions at “Pramesh House”, B/8, Vedant
+                    Bunglow, Main Kalali Road, Kalali, Vadodara – 390 012,
+                    Gujarat State, India,
                   </strong>
                 </p>
               </div>
@@ -193,7 +199,7 @@ const Disclaimer = () => {
               </div>
             </div>
           )}
-          {activeSection === "website" && (
+          {activeSection === "pramesh wealth private limited" && (
             <div>
               <div className="bg-primary-50 p-6 rounded-xl shadow-soft hover:shadow-hover transition-shadow duration-300 mb-8">
                 <p className="text-lg text-primary-700">
@@ -208,7 +214,7 @@ const Disclaimer = () => {
                   documents carefully and obtain expert professional advice.
                 </p>
               </div>
-              <div className="bg-primary-50 p-6 rounded-xl shadow-soft hover:shadow-hover transition-shadow duration-300 mb-8">
+              <div className="bg-primary-50 p-6 rounded-xl shadow-soft hover:shadow-hover transition-shadow duration-300">
                 <p className="text-lg text-primary-700">
                   PWPL does not make any representations that coverage does or
                   does not exist for any claim or loss, or type of claim or
@@ -220,6 +226,10 @@ const Disclaimer = () => {
                   before concluding a sale”.
                 </p>
               </div>
+            </div>
+          )}
+          {activeSection === "website" && (
+            <div>
               <div className="bg-primary-50 p-6 rounded-xl shadow-soft hover:shadow-hover transition-shadow duration-300 mb-8">
                 <p className="text-lg text-primary-700">
                   By accessing website and/or App or any of its associate/group
