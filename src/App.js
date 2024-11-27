@@ -12,10 +12,13 @@ import TidioChat from "./components/TidioChat/TidioChat";
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
+import Disclosure from "./pages/Disclosure/Disclosure";
+import ScrollToTop from "./components/UI/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,6 +33,7 @@ function App() {
             path="/terms-and-conditions"
             element={<TermsAndConditions />}
           />
+          <Route path="/disclosure" element={<Disclosure />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <TidioChat />

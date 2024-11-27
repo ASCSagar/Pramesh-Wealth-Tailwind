@@ -15,7 +15,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Pramesh Wealth</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">
+              Pramesh Wealth
+            </h3>
             <p className="">
               Founded in 2001, the Pramesh has grown to become one of the
               Leading Financial Services Provider. Our wide network spans more
@@ -25,7 +27,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-4 text-white">Quick Links</h4>
+
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="hover:text-primary-300">
@@ -61,10 +64,10 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <h4 className="text-lg font-bold mb-4 text-white">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/sid-sai-kim" className="hover:text-primary-300">
+                <Link to="/" className="hover:text-primary-300">
                   SID/SAI/KIM
                 </Link>
               </li>
@@ -95,7 +98,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
+            <h4 className="text-lg font-bold mb-4 text-white">
+              Connect With Us
+            </h4>
             <p className="mb-4">
               “Pramesh House” 8, Vedant Bunglow,
               <br /> Main Kalali road, Kalali,

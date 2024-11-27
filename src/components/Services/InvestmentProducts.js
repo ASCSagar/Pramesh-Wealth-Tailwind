@@ -1,17 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  TrendingUp,
-  PiggyBank,
-  Clock,
-  Calculator,
-  ArrowRight,
-} from "lucide-react";
+import { TrendingUp, PiggyBank, ArrowRight, House } from "lucide-react";
 import FixedDepositCalculator from "../Calculater/FixedDepositCalculator";
 import MutualFundCalculator from "../Calculater/MutualFundCalculator";
-import RetirementCalculator from "../Calculater/RetirementCalculator";
-import TaxSavingCalculator from "../Calculater/TaxSavingCalculator";
 
 const products = {
   mutualFunds: {
@@ -90,57 +82,30 @@ const products = {
     calculator: <FixedDepositCalculator />,
     cta: "Open a Fixed Deposit Account",
   },
-  retirementPlans: {
-    title: "Retirement Plans",
-    icon: <Clock className="w-12 h-12 mb-4 text-primary-600" />,
+  Real_Estate: {
+    title: "Real Estate",
+    icon: <House className="w-12 h-12 mb-4 text-primary-600" />,
     description:
       "Plan for your golden years with our retirement solutions. Ensure financial independence and peace of mind post-retirement.",
     items: [
       {
-        name: "Pension Plans",
-        description: "Regular income stream after retirement",
+        name: "BUY",
+        description:
+          "Real estate is a class of 'real property' that includes land and anything permanently attached to it, whether natural or man-made.You can invest in real estate directly by purchasing a home, rental property or other property, or indirectly through a real estate investment trust (REIT).",
       },
       {
-        name: "Deferred Annuity",
-        description: "Start receiving payments at a future date",
+        name: "SELL",
+        description:
+          "The most popular way is to buy an investment property and slowly build up your portfolio. Generally, there are two primary ways to make money from real estate assets — appreciation, which is an increase in property value over a period of time, and rental income collected by renting out the property to tenants.",
       },
       {
-        name: "Immediate Annuity",
-        description: "Begin receiving payments right away",
-      },
-      {
-        name: "Gratuity Plans",
-        description: "Employer-provided retirement benefit",
+        name: "RENT",
+        description:
+          "Rental income is any payment you receive for the use or occupation of property. You must report rental income for all your properties. In addition to amounts you receive as normal rent payments, there are other amounts that may be rental income and must be reported on your tax return.",
       },
     ],
-    calculator: <RetirementCalculator />,
+
     cta: "Secure Your Retirement",
-  },
-  taxSaving: {
-    title: "Tax-saving Instruments",
-    icon: <Calculator className="w-12 h-12 mb-4 text-secondary-600" />,
-    description:
-      "Maximize your savings with tax-efficient investments. Reduce your tax liability while growing your wealth.",
-    items: [
-      {
-        name: "ELSS Funds",
-        description: "Equity-linked savings with tax benefits",
-      },
-      {
-        name: "Public Provident Fund (PPF)",
-        description: "Long-term savings with tax-free returns",
-      },
-      {
-        name: "National Pension System (NPS)",
-        description: "Government-backed retirement scheme",
-      },
-      {
-        name: "Fixed Deposits (Tax Saver)",
-        description: "FDs with tax deduction under Section 80C",
-      },
-    ],
-    calculator: <TaxSavingCalculator />,
-    cta: "Optimize Your Tax Savings",
   },
 };
 
@@ -187,7 +152,13 @@ const InvestmentProducts = () => {
             {products[activeProduct].description}
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div
+          className={`grid gap-8 mb-8 ${
+            products[activeProduct].calculator
+              ? "grid-cols-1 lg:grid-cols-2"
+              : "grid-cols-1"
+          }`}
+        >
           <div>
             <h4 className="text-xl font-semibold mb-4 text-primary-700">
               Key Features
@@ -209,13 +180,17 @@ const InvestmentProducts = () => {
               ))}
             </ul>
           </div>
-          <div>
-            <h4 className="text-xl font-semibold mb-4 text-primary-700">
-              Calculator
-            </h4>
-            {products[activeProduct].calculator}
-          </div>
+
+          {products[activeProduct].calculator ? (
+            <div>
+              <h4 className="text-xl font-semibold mb-4 text-primary-700">
+                Calculator
+              </h4>
+              {products[activeProduct].calculator}
+            </div>
+          ) : null}
         </div>
+
         <div className="text-center">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
