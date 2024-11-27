@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import banner from "../../assets/images/invest-banner.jpeg";
 
 const buttons = [
-  { text: "SIP", link: "/sip", delay: 0 },
-  { text: "INSURANCE", link: "/insurance", delay: 0.1 },
-  { text: "RETIREMENT", link: "/retirement", delay: 0.2 },
-  { text: "MUTUAL FUNDS", link: "/mutual-funds", delay: 0.3 },
-  { text: "TAX PLANNING", link: "/tax-planning", delay: 0.4 },
-  { text: "BONDS", link: "/bonds", delay: 0.5 },
-  { text: "GENERAL", link: "/general", delay: 0.6 },
+  { text: "SIP", link: "/", delay: 0 },
+  { text: "INSURANCE", link: "/", delay: 0.1 },
+  { text: "RETIREMENT", link: "/", delay: 0.2 },
+  { text: "MUTUAL FUNDS", link: "/", delay: 0.3 },
+  { text: "TAX PLANNING", link: "/", delay: 0.4 },
+  { text: "BONDS", link: "/", delay: 0.5 },
+  { text: "GENERAL", link: "/", delay: 0.6 },
 ];
 
 const fallAnimation = {
