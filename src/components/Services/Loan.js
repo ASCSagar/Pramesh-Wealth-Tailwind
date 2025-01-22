@@ -84,7 +84,7 @@ const Loan = () => {
             <h3 className="text-3xl font-semibold mb-4 text-primary-800">
               {tabContent[activeTab].title}
             </h3>
-            <p className="text-primary-600 mb-6">
+            <p className="text-secondary-600 mb-6">
               {tabContent[activeTab].description}
             </p>
             <motion.button

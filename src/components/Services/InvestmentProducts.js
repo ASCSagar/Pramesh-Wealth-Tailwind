@@ -3,58 +3,44 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { TrendingUp, PiggyBank, ArrowRight, House } from "lucide-react";
 import FixedDepositCalculator from "../Calculater/FixedDepositCalculator";
-import MutualFundCalculator from "../Calculater/MutualFundCalculator";
 
 const products = {
-  mutualFunds: {
-    title: "Mutual Funds",
+  bondsData: {
+    title: "Bonds/Ncds",
     icon: <TrendingUp className="w-12 h-12 mb-4 text-primary-600" />,
     description:
-      "A Mutual Fund is a financial intermediary which allows a group of investors to pool in their money with a predetermined investment objective. A qualified fund manager is appointed, who is responsible for investing the pooled money into specific securities and asset classes (usually stocks or bonds). When you invest in a mutual fund, you buy a share (or portion) of the mutual fund. We advise and service clients who wish to invest in any mutual fund available in the market. We also provide the platform to buy, sell and monitor your portfolio online.",
+      "Bonds are an excellent investment choice for those seeking steady returns with minimal risk. By lending your money to governments or corporations, you earn regular interest while preserving your capital.",
     items: [
       {
-        name: "Expert Management",
-        description:
-          "Mutual Funds are managed by qualified and experienced professionals who have access to company research reports, research analysts, critical and timely market information.",
+        name: "Bonds",
+        description: "Secure Growth with Stability",
+        fullDescription:
+          "Bonds are an excellent investment choice for those seeking steady returns with minimal risk. By lending your money to governments or corporations, you earn regular interest while preserving your capital.",
+        features: [
+          "Low-risk investment option for stability.",
+          "Regular interest income through coupon payments.",
+          "Diversification to balance your portfolio.",
+          "Wide range of options: government bonds, corporate bonds, tax-free bonds, and more.",
+        ],
+        idealFor:
+          "Investors looking for consistent returns and capital preservation.",
       },
       {
-        name: "Reduced Risks",
-        description:
-          "Mutual Funds help diversify your portfolio and therefore reduce your overall investment risk. To achieve a comparable diversified equity portfolio, you would not only require a lot of cash, your risk is also completely dependent on how those particular companies perform. Mutual funds offer you diversification across and within specific asset class.",
-      },
-      {
-        name: "Speedy access to your money",
-        description:
-          "Investors in open-ended mutual funds can buy and sell units at Net Asset Value (NAV) which is declared on a daily basis.",
-      },
-      {
-        name: "Affordability",
-        description:
-          "Minimum amount required to in a mutual fund is very low. For that amount, you still own a diversified portfolio.",
-      },
-      {
-        name: "Tax Benefits",
-        description:
-          "Equity Linked Savings Schemes (ELSS) offer tax rebates to investors under Section 80C of the Income Tax Act. Also, Capital Gains from the above Mutual Funds are tax-free in the hands of the investor.",
-      },
-      {
-        name: "Lower Costs",
-        description:
-          "Mutual Funds buy and sell large amounts of securities at a time, thus help reducing transaction costs. Also, Mutual Funds in India have No Entry Load.",
-      },
-      {
-        name: "Transparency",
-        description:
-          "Entire portfolio of the Mutual Fund scheme is disclosed to investors on a regular basis. One of the few transparent investment vehicles available in the market today.",
-      },
-      {
-        name: "Regulated for investor protection",
-        description:
-          "The Mutual Fund industry is regulated by Association of Mutual Funds of India (AMFI) in order to safeguard investors’ interest.",
+        name: "Non-Convertible Debentures (NCDs)",
+        description: "High Yields with Fixed Tenures",
+        fullDescription:
+          "Non-Convertible Debentures (NCDs) provide higher returns compared to traditional savings options. Issued by companies, NCDs are designed for investors seeking predictable income over a fixed period.",
+        features: [
+          "Higher interest rates than fixed deposits.",
+          "Fixed tenure with predetermined returns.",
+          "Secured and unsecured options based on your risk appetite.",
+          "Monthly, quarterly, or annual interest payout options.",
+        ],
+        idealFor:
+          "Investors looking for high-yield, fixed-income investments with manageable risk.",
       },
     ],
-    calculator: <MutualFundCalculator />,
-    cta: "Start Investing in Mutual Funds",
+    cta: "Start Investing in Bonds and NCDs",
   },
   fixedDeposits: {
     title: "Fixed Deposits",
@@ -91,7 +77,7 @@ const products = {
       {
         name: "BUY",
         description:
-          "Real estate is a class of 'real property' that includes land and anything permanently attached to it, whether natural or man-made.You can invest in real estate directly by purchasing a home, rental property or other property, or indirectly through a real estate investment trust (REIT).",
+          "Real estate is a class of 'real property' that includes land and anything permanently attached to it, whether natural or man-made. You can invest in real estate directly by purchasing a home, rental property or other property, or indirectly through a real estate investment trust (REIT).",
       },
       {
         name: "SELL",
@@ -104,13 +90,92 @@ const products = {
           "Rental income is any payment you receive for the use or occupation of property. You must report rental income for all your properties. In addition to amounts you receive as normal rent payments, there are other amounts that may be rental income and must be reported on your tax return.",
       },
     ],
-
     cta: "Secure Your Retirement",
   },
 };
 
 const InvestmentProducts = () => {
-  const [activeProduct, setActiveProduct] = useState("mutualFunds");
+  const [activeProduct, setActiveProduct] = useState("bondsData");
+
+  const renderContent = () => {
+    const product = products[activeProduct];
+
+    if (activeProduct === "bondsData") {
+      return (
+        <div className="space-y-8">
+          {product.items.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-primary-50 p-6 rounded-xl shadow-soft"
+            >
+              <h4 className="text-2xl font-semibold mb-3 text-primary-800">
+                {item.name}
+              </h4>
+              <h5 className="text-xl font-medium mb-4 text-primary-700">
+                {item.description}
+              </h5>
+              <p className="text-secondary-600 mb-6">{item.fullDescription}</p>
+
+              <div className="mb-6">
+                <h6 className="text-lg font-medium mb-3 text-primary-700">
+                  {item.name === "Bonds"
+                    ? "Why Choose Bonds?"
+                    : "Key Features:"}
+                </h6>
+                <ul className="space-y-2">
+                  {item.features.map((feature, idx) => (
+                    <motion.li
+                      key={idx}
+                      className="flex items-start"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                    >
+                      <ArrowRight className="w-5 h-5 text-primary-500 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-secondary-600">{feature}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg">
+                <p className="text-primary-700">
+                  <strong>Ideal for:</strong> {item.idealFor}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <h4 className="text-xl font-semibold mb-4 text-primary-700">
+          Key Features
+        </h4>
+        <ul className="space-y-4">
+          {product.items.map((item, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-primary-50 p-4 rounded-xl shadow-soft hover:shadow-hover transition-shadow duration-300"
+            >
+              <h5 className="font-semibold text-lg mb-2 text-primary-700">
+                {item.name}
+              </h5>
+              <p className="text-secondary-600">{item.description}</p>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
 
   return (
     <section className="mb-12 bg-gradient-to-b from-primary-50 to-white p-8 rounded-2xl shadow-soft">
@@ -148,10 +213,11 @@ const InvestmentProducts = () => {
           <h3 className="text-3xl font-semibold mb-4 text-primary-800">
             {products[activeProduct].title}
           </h3>
-          <p className="text-primary-600 mb-6">
+          <p className="text-secondary-600 mb-6">
             {products[activeProduct].description}
           </p>
         </div>
+
         <div
           className={`grid gap-8 mb-8 ${
             products[activeProduct].calculator
@@ -159,36 +225,15 @@ const InvestmentProducts = () => {
               : "grid-cols-1"
           }`}
         >
-          <div>
-            <h4 className="text-xl font-semibold mb-4 text-primary-700">
-              Key Features
-            </h4>
-            <ul className="space-y-4">
-              {products[activeProduct].items.map((item, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-primary-50 p-4 rounded-xl shadow-soft hover:shadow-hover transition-shadow duration-300"
-                >
-                  <h5 className="font-semibold text-lg mb-2 text-primary-700">
-                    {item.name}
-                  </h5>
-                  <p className="text-primary-600">{item.description}</p>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-
-          {products[activeProduct].calculator ? (
+          {renderContent()}
+          {products[activeProduct].calculator && (
             <div>
               <h4 className="text-xl font-semibold mb-4 text-primary-700">
                 Calculator
               </h4>
               {products[activeProduct].calculator}
             </div>
-          ) : null}
+          )}
         </div>
 
         <div className="text-center">

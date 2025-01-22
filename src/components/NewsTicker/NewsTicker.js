@@ -4,7 +4,9 @@ import axios from "axios";
 const NewsCard = ({ title, description, url }) => (
   <div className="bg-white p-4 rounded-lg shadow-md min-w-[300px] max-w-[300px] mr-4">
     <h3 className="font-semibold mb-2 truncate">{title}</h3>
-    <p className="text-sm text-gray-600 mb-2 line-clamp-2">{description}</p>
+    <p className="text-sm text-secondary-600 mb-2 line-clamp-2">
+      {description}
+    </p>
     <a
       href={url}
       target="_blank"

@@ -29,7 +29,7 @@ const FAQItem = ({ question, answer }) => {
             transition={{ duration: 0.3 }}
             className="px-4 pb-5"
           >
-            <p className="text-primary-600 leading-relaxed">{answer}</p>
+            <p className="text-secondary-600 leading-relaxed">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>

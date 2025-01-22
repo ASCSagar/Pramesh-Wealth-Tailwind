@@ -9,7 +9,7 @@ const Service = ({ icon: Icon, title, description, link, index }) => {
         <Link to={link} className="block">
           <Icon className="w-12 h-12 text-primary-500 mb-4" />
           <h3 className="text-xl font-semibold mb-2">{title}</h3>
-          <p>{description}</p>
+          <p className="text-secondary-600">{description}</p>
         </Link>
       </div>
     </AnimatedCard>

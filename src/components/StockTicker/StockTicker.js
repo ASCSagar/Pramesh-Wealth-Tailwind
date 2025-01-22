@@ -46,7 +46,7 @@ const StockTicker = () => {
   }, []);
 
   return (
-    <div className="bg-primary-800 text-white py-2 overflow-hidden">
+    <div className="bg-primary-500 text-white py-2 overflow-hidden">
       <style>{tickerStyles}</style>
       <div className="flex animate-ticker">
         {stockData.concat(stockData).map((stock, index) => (

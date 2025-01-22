@@ -68,7 +68,7 @@ const CompanyHistory = () => {
             <h3 className="text-lg font-semibold text-primary-800 mb-2">
               {point.title}
             </h3>
-            <p className="text-primary-600">{point.description}</p>
+            <p className="text-secondary-600">{point.description}</p>
           </div>
         </motion.div>
       ))}

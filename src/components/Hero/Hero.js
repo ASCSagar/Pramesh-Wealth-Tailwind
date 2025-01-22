@@ -6,7 +6,6 @@ import banner from "../../assets/images/invest-banner.jpeg";
 const buttons = [
   { text: "SIP", link: "/", delay: 0 },
   { text: "INSURANCE", link: "/", delay: 0.1 },
-  { text: "RETIREMENT", link: "/", delay: 0.2 },
   { text: "MUTUAL FUNDS", link: "/", delay: 0.3 },
   { text: "TAX PLANNING", link: "/", delay: 0.4 },
   { text: "BONDS", link: "/", delay: 0.5 },
