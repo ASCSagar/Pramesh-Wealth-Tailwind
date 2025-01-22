@@ -16,6 +16,33 @@ import {
   HelpCircle,
   ArrowRight,
 } from "lucide-react";
+
+const mutualFundTypes = [
+  {
+    title: "Equity Funds",
+    description: "Invest primarily in stocks; suitable for long-term growth.",
+  },
+  {
+    title: "Debt Funds",
+    description:
+      "Invest in bonds and fixed-income securities; suitable for stable returns.",
+  },
+  {
+    title: "Hybrid Funds",
+    description: "Combine equity and debt investments for a balanced approach.",
+  },
+  {
+    title: "Index Funds",
+    description:
+      "Track and replicate the performance of a specific market index (e.g., Nifty 50).",
+  },
+  {
+    title: "Sectoral/Thematic Funds",
+    description:
+      "Focus on specific sectors or themes, such as technology or healthcare.",
+  },
+];
+
 const SIP = () => {
   const [monthlyInvestment, setMonthlyInvestment] = useState(5000);
   const [investmentPeriod, setInvestmentPeriod] = useState(10);
@@ -132,52 +159,33 @@ const SIP = () => {
   return (
     <section className="mb-12">
       <h2 className="text-4xl font-bold mb-6 text-center gradient-text">
-        Systematic Investment Plans (SIPs)
+        Invest Smart and Grow Your Wealth
       </h2>
-      <p className="mb-8 text-lg text-primary-700 text-center max-w-3xl mx-auto">
-        A Systematic Investment Plan (SIP) is a disciplined investment approach
-        where you invest a fixed amount at regular intervals into mutual funds.
-        It's like planting a seed today and watching it grow into a lush tree
-        over time.
+      <p className="mb-8 text-lg text-secondary-700 text-center max-w-3xl mx-auto">
+        Investing in mutual funds is a smart option to grow your wealth. Mutual
+        funds pool money from various investors to buy a diversified portfolio
+        of stocks, bonds, and other securities. This diversified approach
+        reduces risk and allows you to benefit from professional fund
+        management.
+        <br />
+        Mutual funds offer an easy entry point into the world of investing,
+        making them an excellent choice for both beginners and experienced
+        investors. With mutual funds, your money is managed by skilled fund
+        managers who analyze the market and select the best investment
+        opportunities.
       </p>
 
       <div className="bg-primary-50 p-8 rounded-2xl shadow-soft mb-12">
         <h3 className="text-2xl font-semibold mb-4 text-primary-800">
-          Our SIP Offerings:
+          Types of Mutual Funds:
         </h3>
         <motion.ul
-          className="space-y-4"
+          className="space-y-4 list-disc pl-5"
           variants={listVariants}
           initial="hidden"
           animate="show"
         >
-          {[
-            {
-              title: "Dream Builder SIP",
-              description:
-                "Perfect for long-term goals like buying a home or funding education.",
-            },
-            {
-              title: "Wealth Accumulator SIP",
-              description:
-                "Ideal for building substantial wealth over time with higher risk appetite.",
-            },
-            {
-              title: "Retirement Bliss SIP",
-              description:
-                "Designed to secure your golden years with a steady growth plan.",
-            },
-            {
-              title: "Tax Saver SIP",
-              description:
-                "Combine wealth creation with tax benefits under Section 80C.",
-            },
-            {
-              title: "Child's Future SIP",
-              description:
-                "Invest in your child's aspirations and ensure they have the financial support they need.",
-            },
-          ].map((item, index) => (
+          {mutualFundTypes.map((item, index) => (
             <motion.li
               key={index}
               variants={itemVariants}
@@ -191,6 +199,58 @@ const SIP = () => {
             </motion.li>
           ))}
         </motion.ul>
+      </div>
+
+      <div className="bg-white p-8 rounded-2xl shadow-soft mb-12">
+        <h3 className="text-2xl font-semibold mb-6 text-primary-800 text-center">
+          Key Features
+        </h3>
+        <motion.ul
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={listVariants}
+          initial="hidden"
+          animate="show"
+        >
+          {[
+            {
+              title: "Professional Management",
+              description: "Skilled fund managers make investment decisions.",
+            },
+            {
+              title: "Diversification",
+              description: "Spread your risk across various assets.",
+            },
+            {
+              title: "Liquidity",
+              description: "Easily buy and sell fund units as per your needs.",
+            },
+            {
+              title: "Transparency",
+              description: "Regular updates on the fund's performance.",
+            },
+            {
+              title: "SIP Option",
+              description:
+                "Invest a fixed amount regularly for financial discipline.",
+            },
+          ].map((feature, index) => (
+            <motion.li
+              key={index}
+              variants={itemVariants}
+              className="bg-primary-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <h4 className="text-lg font-semibold mb-2 text-primary-700">
+                {feature.title}
+              </h4>
+              <p className="text-secondary-600">{feature.description}</p>
+            </motion.li>
+          ))}
+        </motion.ul>
+        <p className="text-center mt-8 text-secondary-700">
+          Mutual funds provide a flexible and convenient way to grow your money
+          over time. Start your investment journey today for a brighter
+          financial future.
+        </p>
       </div>
 
       <div className="bg-white p-8 rounded-2xl shadow-soft mb-12">

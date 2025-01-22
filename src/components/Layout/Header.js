@@ -41,7 +41,7 @@ const Header = () => {
         }`}
       >
         <Link
-          to="https://iinvestoffice.com/Login.aspx"
+          to="https://login.prameshwealth.com/pages/auth/login"
           className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
           target="_blank"
         >
@@ -62,7 +62,7 @@ const Header = () => {
           Employee LogIn
         </Link>
         <Link
-          to="https://iinvestoffice.com/clientlogin.aspx"
+          to="https://clientlogin.prameshwealth.com/pages/auth/login"
           className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
           target="_blank"
         >
@@ -110,6 +110,12 @@ const Header = () => {
               className="text-gray-800 hover:text-primary-600 px-3 py-2 rounded-md text-base font-medium"
             >
               Announcements
+            </Link>
+            <Link
+              to="/kyc"
+              className="text-gray-800 hover:text-primary-600 px-3 py-2 rounded-md text-base font-medium"
+            >
+              KYC
             </Link>
             <Link
               to="/contact"

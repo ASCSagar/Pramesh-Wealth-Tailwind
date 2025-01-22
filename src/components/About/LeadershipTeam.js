@@ -13,14 +13,14 @@ const leaders = [
       "Core strength in analyzing upcoming market and trading trends.",
       "Believes in generous investment in infrastructure and employees.",
       "Key Responsibilities:",
-      "• Formulating and implementing company policy",
-      "• Directing strategy for profitable growth",
-      "• Developing strategic operating plans",
-      "• Implementing financial control systems",
-      "• Ensuring performance standards are understood and owned",
-      "• Maintaining operational performance",
-      "• Representing the company to HNI and Ultra HNI Clients",
-      "• Building and maintaining an effective executive team",
+      "Formulating and implementing company policy",
+      "Directing strategy for profitable growth",
+      "Developing strategic operating plans",
+      "Implementing financial control systems",
+      "Ensuring performance standards are understood and owned",
+      "Maintaining operational performance",
+      "Representing the company to HNI and Ultra HNI Clients",
+      "Building and maintaining an effective executive team",
     ],
   },
   {
@@ -60,7 +60,7 @@ const LeaderCard = ({ leader, isActive, onClick }) => {
           {leader.name}
         </h3>
         <p className="text-primary-600 mb-4">{leader.position}</p>
-        <p className="text-gray-600">{leader.bio}</p>
+        <p className="text-secondary-600">{leader.bio}</p>
       </div>
     </div>
   );

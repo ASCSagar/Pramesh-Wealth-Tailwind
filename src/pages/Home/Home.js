@@ -115,7 +115,7 @@ const Home = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           <Service
             icon={BarChart2}
-            title=" SIP"
+            title="Mutual Fund"
             description="Invest systematically and watch your wealth grow over time."
             link="/services#sip"
             index={0}
@@ -129,14 +129,14 @@ const Home = () => {
           />
           <Service
             icon={LoaderPinwheel}
-            title="Loan"
+            title="Loans"
             description="Secure your future with our diverse range of loan options."
             link="/services#loan"
             index={1}
           />
           <Service
             icon={Users}
-            title="Investment Products"
+            title="Fds/NCds/Bonds"
             description="Explore a wide range of investment options tailored to your needs."
             link="/services#investment"
             index={2}
@@ -208,9 +208,9 @@ const Home = () => {
           <Slider {...testimonialSettings} className="max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="px-4">
-                <div className="bg-white p-6 rounded-xl shadow-soft h-full flex flex-col justify-between border border-primary-100">
+                <div className="bg-white p-6 rounded-xl shadow-soft h-full flex flex-col justify-between border border-secondary-100">
                   <div className="mb-6">
-                    <p className="italic text-neutral-700 mb-4">
+                    <p className="italic text-secondary-700 mb-4">
                       "{testimonial.text}"
                     </p>
                   </div>
@@ -238,7 +238,7 @@ const Home = () => {
                   <h3 className="text-xl font-semibold mb-4 text-primary-700">
                     {feature.title}
                   </h3>
-                  <p>{feature.description}</p>
+                  <p className="text-secondary-600">{feature.description}</p>
                 </div>
               </AnimatedCard>
             ))}

@@ -78,13 +78,13 @@ const About = () => {
                   Our Story
                 </h3>
                 <ExpandableSection title="Our Founding Story">
-                  <p>
+                  <p className="text-secondary-600">
                     Founded in 2001, Pramesh has grown to become one of the
                     Leading Financial Services Providers. Our wide network spans
                     more than 5 own branches in Gujarat and serves an esteemed
                     clientele of 5000+ investors.
                   </p>
-                  <p className="mt-2">
+                  <p className="mt-2 text-secondary-600">
                     Presently, the company is engaged in multiple areas of
                     Financial Services -- Mutual Fund, Insurance, Fixed Income
                     Securities, Corporate Real Estate Agent, Various Types of
@@ -95,7 +95,7 @@ const About = () => {
 
                 <div className="mt-6">
                   <ExpandableSection title="Our Approach">
-                    <p>
+                    <p className="text-secondary-600">
                       Over the stages of your lifetime, wealth will play
                       different roles for you. At Pramesh, first, we understand
                       Clients' financial needs/goals, risk appetite, Investment
@@ -103,14 +103,14 @@ const About = () => {
                       suite of Wealth Creation Services that match clients'
                       financial and lifestyle needs/goals.
                     </p>
-                    <p className="mt-2">
+                    <p className="mt-2 text-secondary-600">
                       Our financial advisors are dedicated to helping clients
                       carefully plan to afford life's necessities, achieve a
                       comfortable lifestyle, feel confident about financial
                       security and help others in meaningful ways - according to
                       clients' unique financial and lifetime needs/goals.
                     </p>
-                    <p className="mt-2">
+                    <p className="mt-2 text-secondary-600">
                       At Pramesh Wealth Pvt. Ltd., we deliver our services on a
                       personalized level, in the context of a one-on-one
                       relationship with an experienced financial team. The
@@ -129,7 +129,7 @@ const About = () => {
             <MissionVision />
             <div className="mt-8">
               <ExpandableSection title="Extended Mission">
-                <p>
+                <p className="text-secondary-600">
                   To help those who are at the bottom of the pyramid. To work
                   with vigour, dedication and innovation to achieve excellence
                   in service, quality, reliability, safety and customer care as
@@ -139,7 +139,7 @@ const About = () => {
                 </p>
               </ExpandableSection>
               <ExpandableSection title="Extended Vision">
-                <p>
+                <p className="text-secondary-600">
                   To attain globally best standards and become a world-class
                   financial services enterprise -- guided by its purpose to move
                   towards a greater degree of sophistication and maturity.
@@ -155,12 +155,12 @@ const About = () => {
       case "values":
         return (
           <div>
-            <p className="mb-4">
+            <p className="mb-4 text-secondary-600">
               To our customers, we are committed to providing quality products
               and services that consistently represent an exceptional value and
               result in high customer satisfaction.
             </p>
-            <p>
+            <p className="mb-4 text-secondary-600">
               We're here to help our clients in Creating, Managing and
               protecting wealth by ethical and professional financial services
               by having concept of Long Term, Systematic investment in line with
@@ -218,7 +218,7 @@ const About = () => {
           <h2 className="text-3xl font-bold mb-8 text-center text-primary-800">
             Join Our Team
           </h2>
-          <p className="text-center mb-6">
+          <p className="text-center mb-6 text-secondary-600">
             We're always looking for talented individuals to join our mission.
             Explore career opportunities with us and be part of our journey to
             become a world-class financial services enterprise.

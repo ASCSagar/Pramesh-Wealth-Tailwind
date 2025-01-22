@@ -7,6 +7,7 @@ import {
   Instagram,
   Linkedin,
   Youtube,
+  Twitter,
 } from "lucide-react";
 
 const Footer = () => {
@@ -22,7 +23,7 @@ const Footer = () => {
               Founded in 2001, the Pramesh has grown to become one of the
               Leading Financial Services Provider. Our wide network spans more
               than 5 own branches in Gujarat and serving an esteemed clientele
-              of 5000 investors.
+              of 10000+ investors.
             </p>
           </div>
 
@@ -67,7 +68,11 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4 text-white">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="hover:text-primary-300">
+                <Link
+                  to="https://www.sebi.gov.in/filings/mutual-funds.html"
+                  className="hover:text-primary-300"
+                  target="_blank"
+                >
                   SID/SAI/KIM
                 </Link>
               </li>
@@ -117,18 +122,38 @@ const Footer = () => {
               <p className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
                 <a
-                  href="mailto:sarju@prameshwealth.com"
+                  href="mailto:info@prameshwealth.com"
                   className="hover:text-primary-300"
                 >
-                  sarju@prameshwealth.com
+                  info@prameshwealth.com
                 </a>
               </p>
             </div>
             <div className="flex space-x-4 mt-8">
-              <Facebook className="w-6 h-6 text-neutral-200" />
-              <Instagram className="w-6 h-6 text-neutral-200" />
-              <Linkedin className="w-6 h-6 text-neutral-200" />
-              <Youtube className="w-6 h-6 text-neutral-200" />
+              <Link to="https://www.facebook.com/Prameshwealth" target="_blank">
+                <Facebook className="w-6 h-6 text-neutral-200" />
+              </Link>
+              <Link
+                to="https://www.instagram.com/pramesh_wealth/"
+                target="_blank"
+              >
+                <Instagram className="w-6 h-6 text-neutral-200" />
+              </Link>
+              <Link
+                to="https://www.linkedin.com/company/pramesh-wealth-pvt-ltd/?viewAsMember=truehttps://www.instagram.com/pramesh_wealth/https://www.linkedin.com/company/pramesh-wealth-pvt-ltd/?viewAsMember=true"
+                target="_blank"
+              >
+                <Linkedin className="w-6 h-6 text-neutral-200" />
+              </Link>
+              <Link
+                to="https://www.youtube.com/channel/UCerCExGJ8tYPJRpNySDXqZQ"
+                target="_blank"
+              >
+                <Youtube className="w-6 h-6 text-neutral-200" />
+              </Link>
+              <Link to="https://x.com/pramesh_wealth" target="_blank">
+                <Twitter className="w-6 h-6 text-neutral-200" />
+              </Link>
             </div>
           </div>
         </div>
@@ -146,7 +171,7 @@ const Footer = () => {
               <p>
                 <span className="font-semibold">Insurance Business:</span>{" "}
                 Registered with IRDAI as Corporate (Agent) Composite Under the
-                Registration No : CA0787 - Valid Up to 26.12.2024.
+                Registration No : CA0787 - Valid Up to 26.12.2027.
               </p>
               <p>
                 <span className="font-semibold">Grievance Officer:</span> Sarju

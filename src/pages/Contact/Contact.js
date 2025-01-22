@@ -35,19 +35,19 @@ const ContactForm = () => {
         <input
           type="text"
           placeholder="Name"
-          className="w-full p-2 border border-primary-200 rounded"
+          className="w-full p-2 border border-secondary-600 rounded"
         />
         <input
           type="tel"
           placeholder="Phone"
-          className="w-full p-2 border border-primary-200 rounded"
+          className="w-full p-2 border border-secondary-600 rounded"
         />
         <input
           type="email"
           placeholder="Email"
-          className="w-full p-2 border border-primary-200 rounded"
+          className="w-full p-2 border border-secondary-600 rounded"
         />
-        <select className="w-full p-2 border border-primary-200 rounded">
+        <select className="w-full p-2 border border-secondary-600 rounded">
           <option value="">Product Interested</option>
           <option value="mutual_funds">Mutual Funds</option>
           <option value="insurance">Insurance</option>
@@ -58,7 +58,7 @@ const ContactForm = () => {
         <textarea
           placeholder="Your Message"
           rows="4"
-          className="w-full p-2 border border-primary-200 rounded"
+          className="w-full p-2 border border-secondary-600 rounded"
         ></textarea>
         <button
           type="submit"
@@ -87,10 +87,10 @@ const BranchInfo = ({ name, address }) => {
       animate={{ opacity: 1, height: "auto" }}
       exit={{ opacity: 0, height: 0 }}
       transition={{ duration: 0.3 }}
-      className="mb-4"
+      className="mb-4 mt-2"
     >
       <h3 className="font-semibold text-primary-600">{name}</h3>
-      <p className="text-sm text-gray-600">{address}</p>
+      <p className="text-sm text-secondary-600">{address}</p>
     </motion.div>
   );
 };
@@ -113,14 +113,14 @@ const Contact = () => {
             <ContactInfo title="Main Office">
               <div className="flex items-start mb-4">
                 <MapPin className="w-5 h-5 text-primary-500 mr-2 mt-1" />
-                <p>
+                <p className="text-secondary-600">
                   Pramesh Wealth Pvt. Ltd. "Pramesh House" 8, Vedant Bunglow,
                   Main Kalali road, Kalali, Vadodara- 390012
                 </p>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-primary-500 mr-2" />
-                <p>+91-89800 27229</p>
+                <p className="text-secondary-600">+91-89800 27229</p>
               </div>
             </ContactInfo>
 
@@ -141,7 +141,7 @@ const Contact = () => {
                     />
                   </button>
                   {activeBranch === index && (
-                    <BranchInfo name={branch.name} address={branch.address} />
+                    <BranchInfo address={branch.address} />
                   )}
                 </div>
               ))}

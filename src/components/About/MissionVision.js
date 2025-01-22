@@ -6,8 +6,8 @@ const MissionVision = () => {
       <h2 className="text-2xl font-bold mb-4">Our Mission & Vision</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h3 className="text-xl font-semibold mb-2">Mission</h3>
-          <p>
+          <h3 className="text-xl font-secondary mb-2">Mission</h3>
+          <p className="text-secondary-600">
             To empower individuals and families to achieve financial freedom
             through expert guidance, innovative solutions, and unwavering
             commitment to their success.
@@ -15,7 +15,7 @@ const MissionVision = () => {
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-2">Vision</h3>
-          <p>
+          <p className="text-secondary-600">
             To be India's most trusted wealth management partner, known for our
             integrity, expertise, and client-centric approach in helping people
             build and preserve wealth.

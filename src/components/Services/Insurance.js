@@ -117,7 +117,7 @@ const Insurance = () => {
             <h3 className="text-3xl font-semibold mb-4 text-primary-800">
               {tabContent[activeTab].title}
             </h3>
-            <p className="text-primary-600 mb-6">
+            <p className="text-secondary-600 mb-6">
               {tabContent[activeTab].description}
             </p>
           </div>
@@ -133,7 +133,7 @@ const Insurance = () => {
                 <h4 className="font-semibold text-lg mb-2 text-primary-700">
                   {item.name}
                 </h4>
-                <p className="text-primary-600">{item.description}</p>
+                <p className="text-secondary-600">{item.description}</p>
               </motion.div>
             ))}
           </div>

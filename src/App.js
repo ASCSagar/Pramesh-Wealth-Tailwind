@@ -14,6 +14,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 import Disclosure from "./pages/Disclosure/Disclosure";
 import ScrollToTop from "./components/UI/ScrollToTop";
+import Kyc from "./pages/KYC/Kyc";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/downloads" element={<Downloads />} />
           <Route path="/announcement" element={<Announcement />} />
+          <Route path="/kyc" element={<Kyc />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

@@ -4,9 +4,10 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { BarChart2, Shield, Briefcase, LoaderPinwheel } from "lucide-react";
 import FAQs from "../../components/Common/FAQs";
-import sipBanner from "../../assets/images/sip.jpeg";
+import sipBanner from "../../assets/images/MutualFund.jpeg";
 import insuranceBanner from "../../assets/images/insurance.jpeg";
 import investmentBanner from "../../assets/images/retirement.jpeg";
+import RealEstate from "../../assets/images/RealEstate.jpeg";
 import ExpandableSection from "../../components/UI/ExpandableSection";
 import SIP from "../../components/Services/SIP";
 import Insurance from "../../components/Services/Insurance";
@@ -14,17 +15,17 @@ import InvestmentProducts from "../../components/Services/InvestmentProducts";
 import Loan from "../../components/Services/Loan";
 
 const services = [
-  { id: "sip", name: "SIPs", icon: BarChart2 },
+  { id: "sip", name: "Mutual Fund", icon: BarChart2 },
   { id: "insurance", name: "Insurance", icon: Shield },
-  { id: "loan", name: "Loan", icon: LoaderPinwheel },
-  { id: "investment", name: "Investment Products", icon: Briefcase },
+  { id: "loan", name: "Loans", icon: LoaderPinwheel },
+  { id: "investment", name: "Real Estate", icon: Briefcase },
 ];
 
 const bannerImages = {
   sip: sipBanner,
   insurance: insuranceBanner,
   loan: investmentBanner,
-  investment: investmentBanner,
+  investment: RealEstate,
 };
 
 const bannerTitles = {
@@ -51,7 +52,7 @@ const Services = () => {
             <SIP />
             <div className="mt-8">
               <ExpandableSection title="What is a SIP?">
-                <p>
+                <p className="text-secondary-600">
                   Imagine planting a seed today and watching it grow into a lush
                   tree over time. That's the magic of a Systematic Investment
                   Plan (SIP). It's a disciplined investment approach where you
@@ -63,7 +64,7 @@ const Services = () => {
                 </p>
               </ExpandableSection>
               <ExpandableSection title="Product Offerings">
-                <ul className="list-disc pl-5 space-y-2">
+                <ul className="list-disc pl-5 space-y-2 text-secondary-600">
                   <li>
                     <strong>Dream Builder SIP:</strong> Perfect for those aiming
                     to fulfill long-term goals like buying a home or funding
@@ -90,7 +91,7 @@ const Services = () => {
                 </ul>
               </ExpandableSection>
               <ExpandableSection title="How to Start">
-                <ol className="list-decimal pl-5 space-y-2">
+                <ol className="list-decimal pl-5 space-y-2 text-secondary-600">
                   <li>
                     <strong>Select Your SIP Plan:</strong> Choose a plan that
                     aligns with your financial goals and risk tolerance.
@@ -180,11 +181,10 @@ const Services = () => {
             transition={{ duration: 0.5 }}
             className="absolute inset-0"
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${bannerImages[activeSection]})`,
-              }}
+            <img
+              src={bannerImages[activeSection]}
+              alt="Banner"
+              className="absolute inset-0 w-full h-full object-cover  "
             />
           </motion.div>
 
@@ -228,7 +228,7 @@ const Services = () => {
               <h3 className="text-xl font-semibold mb-4 text-primary-700">
                 Expert Guidance
               </h3>
-              <p>
+              <p className="text-secondary-600">
                 Our team of certified financial advisors is dedicated to helping
                 you make informed decisions.
               </p>
@@ -237,7 +237,7 @@ const Services = () => {
               <h3 className="text-xl font-semibold mb-4 text-primary-700">
                 Customized Solutions
               </h3>
-              <p>
+              <p className="text-secondary-600">
                 We understand that one size doesn't fit all; we tailor our
                 products to meet your unique needs.
               </p>
@@ -246,7 +246,7 @@ const Services = () => {
               <h3 className="text-xl font-semibold mb-4 text-primary-700">
                 Technology-Driven
               </h3>
-              <p>
+              <p className="text-secondary-600">
                 Utilize our state-of-the-art online platforms for seamless
                 investing and portfolio tracking.
               </p>
@@ -255,7 +255,7 @@ const Services = () => {
               <h3 className="text-xl font-semibold mb-4 text-primary-700">
                 Transparent Processes
               </h3>
-              <p>
+              <p className="text-secondary-600">
                 We believe in building trust through complete transparency in
                 our operations.
               </p>
