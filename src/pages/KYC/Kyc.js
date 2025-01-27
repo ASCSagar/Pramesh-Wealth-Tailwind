@@ -94,7 +94,7 @@ const Kyc = () => {
                         href={item.link}
                         target="_blank"
                         rel="noreferrer"
-                        className="w-full bg-primary-500 text-white px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors duration-200 text-center font-medium shadow-sm hover:shadow-md"
+                        className="w-full bg-primary-500 text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors duration-200 text-center font-medium shadow-sm hover:shadow-md"
                       >
                         {item.linkText}
                       </a>

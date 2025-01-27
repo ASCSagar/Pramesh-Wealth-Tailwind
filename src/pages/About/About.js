@@ -97,18 +97,19 @@ const About = () => {
                   <ExpandableSection title="Our Approach">
                     <p className="text-secondary-600">
                       Over the stages of your lifetime, wealth will play
-                      different roles for you. At Pramesh, first, we understand
-                      Clients' financial needs/goals, risk appetite, Investment
-                      Time Horizons etc., and offer clients a comprehensive
-                      suite of Wealth Creation Services that match clients'
-                      financial and lifestyle needs/goals.
+                      different roles for you. At Pramesh Wealth, first, we
+                      understand Clients' financial needs/goals, risk appetite,
+                      Investment Time Horizons etc., and offer clients a
+                      comprehensive suite of Wealth Creation Services that match
+                      clients' financial and lifestyle needs/goals.
                     </p>
                     <p className="mt-2 text-secondary-600">
-                      Our financial advisors are dedicated to helping clients
-                      carefully plan to afford life's necessities, achieve a
-                      comfortable lifestyle, feel confident about financial
-                      security and help others in meaningful ways - according to
-                      clients' unique financial and lifetime needs/goals.
+                      Our Professional and Dedicated Members of Team to help
+                      clients carefully plan to afford their life's necessities,
+                      achieve a comfortable lifestyle, feel confident about
+                      financial security and help others in meaningful ways -
+                      according to clients' unique financial and lifetime
+                      needs/goals.
                     </p>
                     <p className="mt-2 text-secondary-600">
                       At Pramesh Wealth Pvt. Ltd., we deliver our services on a

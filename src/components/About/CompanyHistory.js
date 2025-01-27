@@ -36,7 +36,7 @@ const historyPoints = [
     year: "2020",
     title: "Service Enhancement",
     description:
-      "Integrated comprehensive wealth management solutions including PMS, Corporate FDs, NCDs, and Bonds.",
+      "Integrated Comprehensive Wealth Creation Solutions including PMS, Corporate FDs, NCDs and Bonds.",
   },
   {
     year: "2023",

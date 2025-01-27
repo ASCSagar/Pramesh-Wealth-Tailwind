@@ -111,6 +111,25 @@ const FAQs = ({ category }) => {
           "The tax implications of mutual fund investments depend on the type of fund and the duration of investment. For equity funds, gains are tax-free up to ₹1 lakh per year if held for more than one year (long-term capital gains). Beyond this, they're taxed at 10%. If held for less than a year, short-term capital gains are taxed at 15%. For debt funds, gains are added to your income and taxed as per your tax slab if held for less than three years. If held for more than three years, they're taxed at 20% with indexation benefits. ELSS (Equity Linked Savings Scheme) funds offer tax deductions under Section 80C of the Income Tax Act.",
       },
     ],
+    bonds: [
+      {
+        question:
+          "What are the key benefits of investing in Bonds, NCDs, or FDs?",
+        answer:
+          "Bonds, NCDs (Non-Convertible Debentures), and FDs (Fixed Deposits) offer stable and predictable returns, making them ideal for risk-averse investors. They provide a fixed income stream and are generally considered safer compared to equity investments. Additionally, these instruments offer flexibility in terms of tenure and can help diversify your investment portfolio.",
+      },
+      {
+        question: "How are Bonds, NCDs, and FDs different from each other?",
+        answer:
+          "Bonds are debt instruments issued by companies or governments to raise funds and usually pay periodic interest. NCDs are a type of corporate bond that cannot be converted to equity but often provide higher interest rates than traditional bonds. FDs are deposit schemes offered by banks or financial institutions where money is locked in for a fixed period and earns interest. The choice depends on your risk appetite, liquidity needs, and investment horizon.",
+      },
+      {
+        question:
+          "What are the tax implications of investing in Bonds, NCDs, or FDs?",
+        answer:
+          "Interest earned from Bonds, NCDs, or FDs is taxable as per your income tax slab. For FDs, banks deduct TDS (Tax Deducted at Source) if the interest exceeds ₹40,000 in a financial year (₹50,000 for senior citizens). Bonds and NCDs may also involve capital gains tax if sold before maturity. It's important to plan your investments considering their tax treatment to optimize post-tax returns.",
+      },
+    ],
   };
 
   return (
@@ -119,7 +138,7 @@ const FAQs = ({ category }) => {
         Frequently Asked Questions
       </h2>
       <div className="space-y-4">
-        {faqData[category].map((faq, index) => (
+        {faqData[category]?.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />
         ))}
       </div>

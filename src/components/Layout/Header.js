@@ -45,28 +45,14 @@ const Header = () => {
           className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
           target="_blank"
         >
-          Admin LogIn
-        </Link>
-        <Link
-          to="https://iinvestoffice.com/branchlogin.aspx"
-          className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-          target="_blank"
-        >
-          Branch LogIn
-        </Link>
-        <Link
-          to="https://crm.prameshwealth.com/"
-          className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
-          target="_blank"
-        >
-          Employee LogIn
+          Admin/Partner Login
         </Link>
         <Link
           to="https://clientlogin.prameshwealth.com/pages/auth/login"
           className="block px-4 py-2 text-sm text-gray-600 hover:bg-primary-50 hover:text-primary-600"
           target="_blank"
         >
-          Customer LogIn
+          Client Login/Sign up
         </Link>
       </div>
     </div>

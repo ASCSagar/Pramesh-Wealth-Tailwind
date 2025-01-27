@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
               <div className="bg-primary-50 p-6 rounded-xl shadow-soft hover:shadow-hover transition-shadow duration-300">
                 <p className="text-lg text-primary-700">
                   In the course of using this website/mobile application or
-                  availing the products and services, PWMPL may become privy to
+                  availing the products and services, PWPL may become privy to
                   the personal information of the Users of the website/mobile
                   application, including information that is of a confidential &
                   sensitive nature. We may collect information about you from
