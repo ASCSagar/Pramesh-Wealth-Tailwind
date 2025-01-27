@@ -164,18 +164,22 @@ const Footer = () => {
           <div className="text-xs sm:text-sm grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <p>
-                <span className="font-semibold">Mutual Fund Distributo:</span>{" "}
+                <span className="font-semibold">Mutual Fund Distributo : </span>{" "}
                 Registered with AMFI Under ARN No : 100481 - Date of initial
-                Registration: 20/02/2015 - Valid Up to 19th February, 2027.
+                Registration : 20.02.2015 - Valid Up to 19th February, 2027.
               </p>
               <p>
-                <span className="font-semibold">Insurance Business:</span>{" "}
+                <span className="font-semibold">Insurance Business : </span>{" "}
                 Registered with IRDAI as Corporate (Agent) Composite Under the
                 Registration No : CA0787 - Valid Up to 26.12.2027.
               </p>
               <p>
-                <span className="font-semibold">Grievance Officer:</span> Sarju
-                Parikh | 89800 27228 | sarju@prameshwealth.com
+                <span>PMS - APMI Registration no : </span>
+                APRN03881 Valid Up to 02.10.2026.
+              </p>
+              <p>
+                <span className="font-semibold">Grievance Officer : </span>{" "}
+                Sarju Parikh | 89800 27228 | sarju@prameshwealth.com
               </p>
             </div>
 

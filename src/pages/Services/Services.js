@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Landmark } from "lucide-react";
 import { motion } from "framer-motion";
 import { BarChart2, Shield, Briefcase, LoaderPinwheel } from "lucide-react";
 import FAQs from "../../components/Common/FAQs";
 import sipBanner from "../../assets/images/MutualFund.jpeg";
 import insuranceBanner from "../../assets/images/insurance.jpeg";
-import investmentBanner from "../../assets/images/retirement.jpeg";
+import investmentBanner from "../../assets/images/Loans.jpeg";
 import RealEstate from "../../assets/images/RealEstate.jpeg";
+import BondsImg from "../../assets/images/Bonds.jpeg";
 import ExpandableSection from "../../components/UI/ExpandableSection";
 import SIP from "../../components/Services/SIP";
 import Insurance from "../../components/Services/Insurance";
 import InvestmentProducts from "../../components/Services/InvestmentProducts";
 import Loan from "../../components/Services/Loan";
+import Bonds from "../../components/Services/Bonds";
 
 const services = [
   { id: "sip", name: "Mutual Fund", icon: BarChart2 },
   { id: "insurance", name: "Insurance", icon: Shield },
   { id: "loan", name: "Loans", icon: LoaderPinwheel },
   { id: "investment", name: "Real Estate", icon: Briefcase },
+  { id: "bonds", name: "Bonds/NCDs/FDs", icon: Landmark },
 ];
 
 const bannerImages = {
@@ -26,6 +29,7 @@ const bannerImages = {
   insurance: insuranceBanner,
   loan: investmentBanner,
   investment: RealEstate,
+  bonds: BondsImg,
 };
 
 const bannerTitles = {
@@ -33,6 +37,7 @@ const bannerTitles = {
   insurance: "",
   loan: "",
   investment: "",
+  bonds: "",
 };
 
 const bannerDescriptions = {
@@ -40,6 +45,7 @@ const bannerDescriptions = {
   insurance: "",
   loan: "",
   investment: "",
+  bonds: "",
 };
 
 const Services = () => {
@@ -141,6 +147,16 @@ const Services = () => {
             <InvestmentProducts />
             <div className="mt-12">
               <FAQs category="investment" />
+            </div>
+          </>
+        );
+
+      case "bonds":
+        return (
+          <>
+            <Bonds />
+            <div className="mt-12">
+              <FAQs category="bonds" />
             </div>
           </>
         );

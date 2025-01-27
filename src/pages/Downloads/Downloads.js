@@ -1,24 +1,42 @@
 import React from "react";
 import { FaFilePdf } from "react-icons/fa";
-import file1 from "../../files/CAMSKRA Non Individual Form-May 2021_0.pdf";
-import file2 from "../../files/CKYC-KRA-KYC-FormforIndividuals.pdf";
-import file3 from "../../files/Comman Transaction - Pramesh.pdf";
+import file1 from "../../files/CAMS_FATCA_Non_Individual.pdf";
+import file2 from "../../files/CAMS_FATCA-Individuals.pdf";
+import file3 from "../../files/CAMS_UBO_Declaration_Non_Indvidual.pdf";
+import file4 from "../../files/KFINTECH_FATCA_CRS_Declaration_form_Individual.pdf";
+import file5 from "../../files/KFINTECH_FATCA_UBO_NON_INDIVIDUALS.pdf";
+import file6 from "../../files/Pramesh Comman Transaction Form.pdf";
 
 const files = [
   {
     id: 1,
-    name: "CAMSKRA Non Individual Form-May 2021_0",
+    name: "CAMS FATCA Non Individual",
     file: file1,
   },
   {
     id: 2,
-    name: "CKYC-KRA-KYC-FormforIndividuals",
+    name: "CAMS FATCA-Individuals",
     file: file2,
   },
   {
     id: 3,
-    name: "Comman Transaction - Pramesh",
+    name: "CAMS UBO Declaration Non Indvidual",
     file: file3,
+  },
+  {
+    id: 4,
+    name: "KFINTECH FATCA CRS Declaration form Individual",
+    file: file4,
+  },
+  {
+    id: 5,
+    name: "KFINTECH FATCA UBO NON INDIVIDUALS",
+    file: file5,
+  },
+  {
+    id: 6,
+    name: "Pramesh Comman Transaction Form",
+    file: file6,
   },
 ];
 
