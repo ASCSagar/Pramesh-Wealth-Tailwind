@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone, MapPin, ChevronDown } from "lucide-react";
+import emailjs from "emailjs-com";
 
 const branches = [
   {
@@ -11,7 +12,7 @@ const branches = [
   {
     name: "MANJALPUR",
     address:
-      "112-Ronak Plaza, Nr. Tulshidham Char Rasta, Manjalpur , Vadodara-390011",
+      "1st floor ,109 lillaria paramount opp icici bank Manjalpur 390011",
   },
   {
     name: "GANGOTRI",
@@ -26,29 +27,100 @@ const branches = [
 ];
 
 const ContactForm = () => {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+
+  const [status, setStatus] = React.useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateOnePromise = emailjs.send(
+      "service_2oba7nq",
+      "template_p5y4jrd",
+      formData,
+      "Y0rnccQhZBlQb2bWi"
+    );
+
+    const templateTwoPromise = emailjs.send(
+      "service_2oba7nq",
+      "template_0jp5c53",
+      formData,
+      "Y0rnccQhZBlQb2bWi"
+    );
+
+    Promise.all([templateOnePromise, templateTwoPromise])
+      .then((responses) => {
+        console.log("Emails sent successfully:", responses);
+        setStatus("success");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          service: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Email sending failed:", error);
+        setStatus("error");
+      });
+  };
+
   return (
-    <form className="bg-white p-6 rounded-lg shadow-soft">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-white p-6 rounded-lg shadow-soft"
+    >
       <h2 className="text-2xl font-semibold mb-4 text-primary-700">
         Get in Touch
       </h2>
       <div className="space-y-4">
         <input
           type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
           placeholder="Name"
           className="w-full p-2 border border-secondary-600 rounded"
+          required
         />
         <input
           type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
           placeholder="Phone"
           className="w-full p-2 border border-secondary-600 rounded"
+          required
         />
         <input
           type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
           placeholder="Email"
           className="w-full p-2 border border-secondary-600 rounded"
+          required
         />
-        <select className="w-full p-2 border border-secondary-600 rounded">
-          <option value="">Product Interested</option>
+        <select
+          name="service"
+          value={formData.service}
+          onChange={handleChange}
+          className="w-full p-2 border border-secondary-600 rounded"
+          required
+        >
+          <option value="">Service Interested</option>
           <option value="mutual_funds">Mutual Funds</option>
           <option value="insurance">Insurance</option>
           <option value="fixed_income">Fixed Income Securities</option>
@@ -56,9 +128,13 @@ const ContactForm = () => {
           <option value="loans">Loans</option>
         </select>
         <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
           placeholder="Your Message"
           rows="4"
           className="w-full p-2 border border-secondary-600 rounded"
+          required
         ></textarea>
         <button
           type="submit"
@@ -66,6 +142,16 @@ const ContactForm = () => {
         >
           Send Message
         </button>
+        {status === "success" && (
+          <p className="text-green-500 mt-2">
+            Your message has been sent successfully!
+          </p>
+        )}
+        {status === "error" && (
+          <p className="text-red-500 mt-2">
+            Failed to send your message. Please try again later.
+          </p>
+        )}
       </div>
     </form>
   );
