@@ -57,7 +57,7 @@ const PrivacyPolicy = () => {
                   purposes of this document, the term Users means any person
                   accessing or using the website www.prameshwealth.com or mobile
                   application or any of its products or services or features.
-                  PWMPL is strongly committed to protecting the privacy of the
+                  PWPL is strongly committed to protecting the privacy of the
                   Users and has taken all necessary and reasonable measures to
                   protect the confidentiality of the User information and its
                   transmission through the world wide web and it shall not be

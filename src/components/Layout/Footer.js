@@ -164,7 +164,9 @@ const Footer = () => {
           <div className="text-xs sm:text-sm grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <p>
-                <span className="font-semibold">Mutual Fund Distributo : </span>{" "}
+                <span className="font-semibold">
+                  Mutual Fund Distributor :{" "}
+                </span>{" "}
                 Registered with AMFI Under ARN No : 100481 - Date of initial
                 Registration : 20.02.2015 - Valid Up to 19th February, 2027.
               </p>
@@ -179,7 +181,7 @@ const Footer = () => {
               </p>
               <p>
                 <span className="font-semibold">Grievance Officer : </span>{" "}
-                Sarju Parikh | 89800 27228 | sarju@prameshwealth.com
+                Sarju Parikh | +91-8980027229 | sarju@prameshwealth.com
               </p>
             </div>
 

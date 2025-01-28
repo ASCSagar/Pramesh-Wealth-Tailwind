@@ -159,7 +159,7 @@ const SIP = () => {
   return (
     <section className="mb-12">
       <h2 className="text-4xl font-bold mb-6 text-center gradient-text">
-        Invest Smart and Grow Your Wealth
+        Invest Smartly to Grow Your Wealth
       </h2>
       <p className="mb-8 text-lg text-secondary-700 text-center max-w-3xl mx-auto">
         Investing in mutual funds is a smart option to grow your wealth. Mutual
