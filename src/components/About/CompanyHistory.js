@@ -12,7 +12,7 @@ const historyPoints = [
     year: "2005",
     title: "Expansion of Services",
     description:
-      "Introduced Mutual Fund advisory and Insurance services to our portfolio.",
+      "Introduced Mutual Fund and Insurance services to our portfolio.",
   },
   {
     year: "2010",

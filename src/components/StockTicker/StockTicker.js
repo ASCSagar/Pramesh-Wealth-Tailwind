@@ -46,7 +46,7 @@ const StockTicker = () => {
   }, []);
 
   return (
-    <div className="bg-primary-500 text-white py-2 overflow-hidden">
+    <div className="bg-gray-200 text-gray-800 py-2 overflow-hidden">
       <style>{tickerStyles}</style>
       <div className="flex animate-ticker">
         {stockData.concat(stockData).map((stock, index) => (
@@ -55,7 +55,7 @@ const StockTicker = () => {
             <span className="ml-2">{stock.price}</span>
             <span
               className={`ml-2 ${
-                stock.change.startsWith("-") ? "text-red-400" : "text-green-400"
+                stock.change.startsWith("-") ? "text-red-600" : "text-green-600"
               }`}
             >
               {stock.change}

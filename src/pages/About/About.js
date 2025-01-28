@@ -79,10 +79,10 @@ const About = () => {
                 </h3>
                 <ExpandableSection title="Our Founding Story">
                   <p className="text-secondary-600">
-                    Founded in 2001, Pramesh has grown to become one of the
-                    Leading Financial Services Providers. Our wide network spans
-                    more than 5 own branches in Gujarat and serves an esteemed
-                    clientele of 5000+ investors.
+                    Founded in 2001, Pramesh Wealth Pvt. Ltd. has grown to
+                    become one of the Leading Financial Services Providers. Our
+                    wide network spans more than 5 own branches in Gujarat and
+                    serves an esteemed clientele of 10000+ investors.
                   </p>
                   <p className="mt-2 text-secondary-600">
                     Presently, the company is engaged in multiple areas of
