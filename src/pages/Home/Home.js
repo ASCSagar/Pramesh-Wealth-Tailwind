@@ -31,7 +31,7 @@ import TaxSavingCalculator from "../../components/Calculater/TaxSavingCalculator
 const testimonials = [
   {
     name: "Ananya Sharma",
-    text: "Working with [Your Company Name] has been a game-changer. Their personalized approach helped me clarify my goals and set me on the path to financial freedom.",
+    text: "Working with Pramesh Wealth Pvt. Ltd. has been a game-changer. Their personalized approach helped me clarify my goals and set me on the path to financial freedom.",
   },
   {
     name: "Rajesh Patel",

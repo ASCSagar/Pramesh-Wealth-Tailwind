@@ -80,7 +80,7 @@ const Header = () => {
               About Us
             </Link>
             <Link
-              to="/services"
+              to="/service"
               className="text-gray-800 hover:text-primary-600 px-3 py-2 rounded-md text-base font-medium"
             >
               Services
@@ -162,7 +162,7 @@ const Header = () => {
               About Us
             </Link>
             <Link
-              to="/services"
+              to="/service"
               className="block py-2 text-gray-800 hover:text-primary-600"
               onClick={toggleMobileMenu}
             >
