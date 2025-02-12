@@ -115,8 +115,8 @@ const Footer = () => {
             <div className="space-y-2">
               <p className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                <a href="tel:8980027228" className="hover:text-primary-300">
-                  89800 27228
+                <a href="tel:8980027229" className="hover:text-primary-300">
+                  8980027229
                 </a>
               </p>
               <p className="flex items-center">
@@ -180,8 +180,10 @@ const Footer = () => {
                 APRN03881 Valid Up to 02.10.2026.
               </p>
               <p>
-                <span className="font-semibold">Grievance Officer : </span>{" "}
-                Sarju Parikh | +91-8980027229 | sarju@prameshwealth.com
+                <span className="font-semibold">
+                  Grievances Redressal Division |
+                </span>
+                {""} +91-8980027229 grievance.redressal@prameshwealth.com
               </p>
             </div>
 
