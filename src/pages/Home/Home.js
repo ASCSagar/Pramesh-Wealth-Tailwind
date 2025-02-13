@@ -119,6 +119,7 @@ const Home = () => {
             description="Invest systematically and watch your wealth grow over time."
             link="/service"
             index={0}
+            keyword="sip"
           />
           <Service
             icon={Shield}
@@ -126,6 +127,7 @@ const Home = () => {
             description="Protect your family's future with our comprehensive insurance solutions."
             link="/service"
             index={1}
+            keyword="insurance"
           />
           <Service
             icon={LoaderPinwheel}
@@ -133,6 +135,7 @@ const Home = () => {
             description="Secure your future with our diverse range of loan options."
             link="/service"
             index={1}
+            keyword="loan"
           />
           <Service
             icon={Users}
@@ -140,6 +143,7 @@ const Home = () => {
             description="Explore a wide range of investment options tailored to your needs."
             link="/service"
             index={2}
+            keyword="bonds"
           />
         </div>
       </section>
