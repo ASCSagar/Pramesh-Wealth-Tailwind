@@ -117,28 +117,28 @@ const Home = () => {
             icon={BarChart2}
             title="Mutual Fund"
             description="Invest systematically and watch your wealth grow over time."
-            link="/services#sip"
+            link="/service"
             index={0}
           />
           <Service
             icon={Shield}
             title="Insurance"
             description="Protect your family's future with our comprehensive insurance solutions."
-            link="/services#insurance"
+            link="/service"
             index={1}
           />
           <Service
             icon={LoaderPinwheel}
             title="Loans"
             description="Secure your future with our diverse range of loan options."
-            link="/services#loan"
+            link="/service"
             index={1}
           />
           <Service
             icon={Users}
             title="Fds/NCds/Bonds"
             description="Explore a wide range of investment options tailored to your needs."
-            link="/services#investment"
+            link="/service"
             index={2}
           />
         </div>
