@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Landmark } from "lucide-react";
 import { motion } from "framer-motion";
@@ -50,6 +50,13 @@ const bannerDescriptions = {
 
 const Services = () => {
   const [activeSection, setActiveSection] = useState("sip");
+
+  useEffect(() => {
+    const savedService = localStorage.getItem("activeService");
+    if (savedService) {
+      setActiveSection(savedService);
+    }
+  }, []);
   const renderContent = () => {
     switch (activeSection) {
       case "sip":
