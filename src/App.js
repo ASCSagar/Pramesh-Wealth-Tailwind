@@ -8,7 +8,6 @@ import Services from "./pages/Services/Services";
 import Downloads from "./pages/Downloads/Downloads";
 import Announcement from "./pages/Announcement/Announcement";
 import NotFound from "./pages/NotFound/NotFound";
-import TidioChat from "./components/TidioChat/TidioChat";
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
@@ -38,7 +37,6 @@ function App() {
           <Route path="/disclosure" element={<Disclosure />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <TidioChat />
       </Layout>
     </Router>
   );
