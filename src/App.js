@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -14,6 +13,7 @@ import TermsAndConditions from "./pages/TermsAndConditions/TermsAndConditions";
 import Disclosure from "./pages/Disclosure/Disclosure";
 import ScrollToTop from "./components/UI/ScrollToTop";
 import Kyc from "./pages/KYC/Kyc";
+import TidioChat from "./components/TidioChat/TidioChat";
 
 function App() {
   return (
@@ -37,6 +37,7 @@ function App() {
           <Route path="/disclosure" element={<Disclosure />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <TidioChat />
       </Layout>
     </Router>
   );
