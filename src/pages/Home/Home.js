@@ -39,7 +39,7 @@ const testimonials = [
   },
   {
     name: "Neha Gupta",
-    text: "Their innovative approach to financial planning has opened up new investment avenues for me. I'm grateful for their expertise and guidance.",
+    text: "Their innovative approach with availability of Multi- Asset Classes has help me to build up a diversified portfolio that mitigates risk which align with my risk profile.", //add new 
   },
 ];
 
