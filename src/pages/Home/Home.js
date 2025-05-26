@@ -34,16 +34,8 @@ const testimonials = [
     text: "Working with Pramesh Wealth Pvt. Ltd. has been a game-changer. Their personalized approach helped me clarify my goals and set me on the path to financial freedom.",
   },
   {
-    name: "Rajesh Patel",
-    text: "I've seen my investments grow steadily over the years. Their expert advice and diverse portfolio options have truly made a difference.",
-  },
-  {
     name: "Priya Mehta",
     text: "The team's dedication to understanding my unique financial situation has been impressive. I feel confident about my financial future.",
-  },
-  {
-    name: "Vikram Singh",
-    text: "The wealth management strategies provided by the team have exceeded my expectations. I've achieved financial milestones I never thought possible.",
   },
   {
     name: "Neha Gupta",
