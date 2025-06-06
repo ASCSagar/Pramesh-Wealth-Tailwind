@@ -30,19 +30,17 @@ const Hero = ({ title, subtitle, banner }) => {
             "Invest Disciplinary and Smartly for Creation of Financial Wealth in
             a More Distant Future."
           </motion.p>
-
           <motion.div
             className="text-sm md:text-base text-gray-200 font-light tracking-wide border-l-2 border-yellow-400 pl-4"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
           >
-            We are <span className="text-yellow-400">AMFI</span> registered
-            Mutual Fund Distributor and Registered with{" "}
-            <span className="text-yellow-400">IRDAI</span> as Insurance
-            Corporate Agent
+            We are registered with <span className="text-yellow-400">AMFI</span>{" "}
+            as a Corporate Mutual Fund Distributor,{" "}
+            <span className="text-yellow-400">IRDAI</span> as an Insurance
+            Corporate Agent, and APMI for Portfolio Management Services (PMS).
           </motion.div>
-
           <motion.div
             className="absolute -bottom-2 left-6 w-16 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-500"
             initial={{ scaleX: 0 }}
